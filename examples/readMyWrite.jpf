@@ -1,0 +1,30 @@
+target= readMyWrite
+
+classpath=${jpf-symbc}/build/examples/
+
+sourcepath=${jpf-symbc}/src/examples/
+
+
+symbolic.method=readMyWrite.simple() 
+
+#ec=TransitCenter.increase(sym),TransitCenter.value(sym)
+#cloud=PrionCloud.put(sym),PrionCloud.get(sym)
+cloud1=cloud.get(sym),cloud.put(sym#con)
+
+listener = gov.nasa.jpf.symbc.SymbolicListener
+
+
+outputpath = ${jpf-symbc}/prettyprint
+
+symbolic.visualizer.outputpath = ${jpf-symbc}/prettyprint
+#search.class = .search.heuristic.BFSHeuristic
+
+vm.storage.class=nil
+symbolic.minint=-100
+symbolic.maxint=100
+symbolic.undefined=1000
+symbolic.debug=true
+symbolic.dp=Z3
+symbolic.string_dp=z3
+#automata 
+#z3
