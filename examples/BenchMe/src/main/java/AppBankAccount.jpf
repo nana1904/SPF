@@ -1,0 +1,29 @@
+target= BenchMe.src.main.java.BenchMeMain
+
+classpath=${jpf-symbc}/build/examples/
+
+sourcepath=${jpf-symbc}/src/examples/
+
+
+symbolic.method=BenchMe.src.main.java.AppBankAccount.balance() 
+
+##
+ec=BenchMe.src.main.java.PNCounter.decrease(sym),BenchMe.src.main.java.PNCounter.increase(sym),BenchMe.src.main.java.PNCounter.value(sym)
+cloud=BenchMe.src.main.java.PrionCloud.put(sym),BenchMe.src.main.java.PrionCloud.get(sym)
+##
+#ec=BenchMe.src.main.java.GCounter.increase(sym),BenchMe.src.main.java.GCounter.value(sym)
+#cloud=BenchMe.src.main.java.PrionCloud.put(sym),BenchMe.src.main.java.PrionCloud.get(sym)
+
+listener = gov.nasa.jpf.symbc.SymbolicListener
+
+outputpath = ${jpf-symbc}/prettyprint
+
+symbolic.visualizer.outputpath = ${jpf-symbc}/prettyprint
+#search.class = .search.heuristic.BFSHeuristic
+
+vm.storage.class=nil
+symbolic.minint=-100
+symbolic.maxint=100
+symbolic.undefined=1000
+symbolic.debug=true
+symbolic.dp=Z3
