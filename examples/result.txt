@@ -1,0 +1,35 @@
+1.NewDekker -
+	    ec: false
+	    sc: true
+2.causalArbitration -
+	    ec: false
+	    sc: true
+
+3.causalVis -
+	    ec: false
+	    sc: true
+
+4.consistentPrefix -
+	    ec: false
+	    sc: true
+
+5.monotonicReads -
+	    ec: true
+	    sc: true
+
+6.readMyWrites -
+	    ec: true
+	    sc: true
+
+
+7.AppHelloGCounter.java -
+			    ec: false
+	    		    sc: true 
+
+8.AppBankAccount.java -
+		      	    ec: false
+	    		    sc: true
+
+9.AppConcertAdmission.java -
+			    ec: false
+			    sc: true
